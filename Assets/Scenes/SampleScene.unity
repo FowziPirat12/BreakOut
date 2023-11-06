@@ -2158,7 +2158,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 7.095888
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3258,6 +3258,7 @@ EdgeCollider2D:
   m_Points:
   - {x: -10.916834, y: -5.7816286}
   - {x: -10.901483, y: 3.4793508}
+  - {x: -10.92825, y: 4.9996166}
   - {x: -10.944967, y: 6.7241235}
   - {x: -10.923356, y: 8.063817}
   - {x: 13.296264, y: 8.132137}
@@ -3276,7 +3277,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.2, y: -1.96, z: -0.76584363}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.26, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
