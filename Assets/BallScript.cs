@@ -6,8 +6,8 @@ public class BallScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed = 5f; 
-    public float minY = -6.9f; 
+    public float speed = 10f; 
+    public float minY = -6.5f; 
     public float maxVelocity = 15f; 
     Rigidbody2D rb;
 
@@ -15,10 +15,8 @@ public class BallScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector3(0,1,0);
-
-        rb.isKinematic = true;
-        rb.AddForce(new Vector2(0, speed));
+        rb.AddForce(new Vector3(0, 1, 0));
+        
     }
 
     // Update is called once per frame
@@ -34,5 +32,6 @@ public class BallScript : MonoBehaviour
         {
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxVelocity);
         }
+    
     }
 }
