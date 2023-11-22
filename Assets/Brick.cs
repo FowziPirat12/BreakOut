@@ -11,7 +11,10 @@ public class Brick : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Ball"))
         {
+            collision.gameObject.GetComponent<Points>().AddPoints(5);
             Destroy(gameObject);
         }   
+        
     }
+
 }
