@@ -9,7 +9,7 @@ public class BallScript : MonoBehaviour
     public float speed = 10f; 
     public float minY = -6.5f; 
     public float maxVelocity = 15f; 
-    Rigidbody2D rb;
+    Rigidbody2D rb; 
 
     
     void Start()

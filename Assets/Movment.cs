@@ -6,7 +6,7 @@ public class NewBehaviourScript : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed = 1f;
+    public float speed = 5f;
     void Start()
     {
         
