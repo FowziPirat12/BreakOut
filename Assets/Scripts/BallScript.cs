@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BallScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
 
-    public float speed = 10f; 
-    public float minY = -6.5f; 
+    public float speed = 10f;
+    public float minY = -6.5f;     
     public float maxVelocity = 15f; 
     Rigidbody2D rb; 
 
@@ -15,8 +15,8 @@ public class BallScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector3(0, 1, 0));
-        
+         rb.AddForce(new Vector3(0, 1, 0));
+         
     }
 
     // Update is called once per frame
