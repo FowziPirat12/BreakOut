@@ -5,8 +5,8 @@ using UnityEngine;
 public class BallScript : MonoBehaviour
 {
     // Start is called before the first frame update 
-
-    public float speed = 10f;
+    
+    
     public float minY = -6.5f;     
     public float maxVelocity = 15f; 
     Rigidbody2D rb; 
@@ -15,7 +15,7 @@ public class BallScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-         rb.AddForce(new Vector3(0, 1, 0));
+        rb.AddForce(new Vector3(0, 1, 0));
          
     }
 
@@ -24,8 +24,8 @@ public class BallScript : MonoBehaviour
     {
         if (transform.position.y < minY)
         {
-            transform.position = Vector3.zero; 
-            rb.velocity = Vector3.zero; 
+            transform.position = new Vector3(0, -1, 0); 
+            //rb.velocity = new Vector3(0,1,0); 
         }
 
         if (rb.velocity.magnitude > maxVelocity)
