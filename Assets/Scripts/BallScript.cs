@@ -10,9 +10,16 @@ public class BallScript : MonoBehaviour
     public float minY = -6.5f;     
     public float maxVelocity = 15f; 
     Rigidbody2D rb; 
-    int lives = 3
+  
+    int lives = 3;
 
-    
+    public GameObject [] livesImage;
+
+    public GameObject gameOverPanel;
+
+    int brickcount = 24; 
+    public GameObject youwinPanel;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,19 +32,39 @@ public class BallScript : MonoBehaviour
     {
         if (transform.position.y < minY)
         {
-            transform.position = new Vector3(0, -1, 0); 
-            //rb.velocity = new Vector3(0,1,0); 
+            if (lives <= 0)
+            {
+                GameOver();
+            }
+            else 
+            {
+                transform.position = new Vector3(0, 0, 0); 
+                //rb.velocity = new Vector3(0,1,0); 
+                lives --;
+                livesImage[lives].SetActive(false);
+            }
         }
 
         if (rb.velocity.magnitude > maxVelocity)
         {
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxVelocity);
         }
-
-        private void private void OnCollisionEnter2D(Collision2D colllision) 
-        {
-            if (collision.gameObject.CompareTag("9-Sliced"));
-        }
     
     }
+
+     void GameOver ( ) 
+    {
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0;
+        Destroy(gameObject);
+    }
+
+    public void CheckWin(){
+        brickcount--;
+        if(brickcount < 1){
+            youwinPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
+    }
+
 }
