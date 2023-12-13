@@ -10,6 +10,7 @@ public class BallScript : MonoBehaviour
     public float minY = -6.5f;     
     public float maxVelocity = 15f; 
     Rigidbody2D rb; 
+    int lives = 3
 
     
     void Start()
@@ -31,6 +32,11 @@ public class BallScript : MonoBehaviour
         if (rb.velocity.magnitude > maxVelocity)
         {
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxVelocity);
+        }
+
+        private void private void OnCollisionEnter2D(Collision2D colllision) 
+        {
+            if (collision.gameObject.CompareTag("9-Sliced"));
         }
     
     }
