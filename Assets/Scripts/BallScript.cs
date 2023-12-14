@@ -38,8 +38,8 @@ public class BallScript : MonoBehaviour
             }
             else 
             {
-                transform.position = new Vector3(0, 0, 0); 
-                //rb.velocity = new Vector3(0,1,0); 
+                transform.position = Vector3.zero; 
+                //rb.velocity = Vector3.zero; 
                 lives --;
                 livesImage[lives].SetActive(false);
             }

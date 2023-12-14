@@ -7,7 +7,7 @@ public class PlayAgain : MonoBehaviour
 {
     public void Restart()
     {
-        Time.timeScale= 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+        SceneManager.LoadScene("SampleScene");
     }
 }
