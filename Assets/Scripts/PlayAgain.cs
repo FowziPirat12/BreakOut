@@ -8,6 +8,7 @@ public class PlayAgain : MonoBehaviour
     public void Restart()
     {
         
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MainMenu");
     }
 }
+
